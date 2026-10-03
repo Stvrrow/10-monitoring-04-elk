@@ -1,0 +1,8 @@
+Sat 03 Oct 2026 05:37:37 PM MSK
+CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                                                                                                NAMES
+fa896e57bc24   logstash:8.7.0           "/usr/local/bin/dock…"   6 minutes ago   Up 6 minutes   0.0.0.0:5044->5044/tcp, [::]:5044->5044/tcp, 0.0.0.0:5046->5046/tcp, [::]:5046->5046/tcp, 9600/tcp   logstash
+c2e975e875b1   elastic/filebeat:8.7.0   "/usr/bin/tini -- /u…"   6 minutes ago   Up 6 minutes                                                                                                        filebeat
+43ae70514cda   kibana:8.7.0             "/bin/tini -- /usr/l…"   6 minutes ago   Up 6 minutes   0.0.0.0:5601->5601/tcp, [::]:5601->5601/tcp                                                          kibana
+eb768fea24f1   elasticsearch:8.7.0      "/bin/tini -- /usr/l…"   6 minutes ago   Up 6 minutes   0.0.0.0:9200->9200/tcp, [::]:9200->9200/tcp, 9300/tcp                                                es-hot
+ad78370154a4   elasticsearch:8.7.0      "/bin/tini -- /usr/l…"   6 minutes ago   Up 6 minutes   9200/tcp, 9300/tcp                                                                                   es-warm
+ef6f2c185e57   python:3.9-alpine        "python3 /opt/run.py"    6 minutes ago   Up 6 minutes                                                                                                        some_app
